@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title color="primary">Componentes</ion-title>
   </ion-toolbar>
@@ -23,7 +23,7 @@
       </ion-button>
     </ion-item>
   </ion-list>
-  <!-- <ion-header>
+  <ion-header>
   <ion-toolbar>
     <ion-title>Componentes</ion-title>
   </ion-toolbar>
@@ -40,4 +40,21 @@
     Action Sheet
   </ion-button> -->
 
+<!-- </ion-content> --> 
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="primary">Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail>
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+      {{c.name}}
+    </ion-item>
+  </ion-list>
 </ion-content>
