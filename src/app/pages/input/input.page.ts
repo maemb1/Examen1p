@@ -13,8 +13,10 @@ export class InputPage implements OnInit {
     password: ''
   }
   constructor() { }
+
   ngOnInit() {
   }
+
   onSubmit(formulario: NgForm) {
     console.log('submit');
     console.log(this.usuario);

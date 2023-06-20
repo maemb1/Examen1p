@@ -1,60 +1,24 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title color="primary">Componentes</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
-      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
-      {{c.name}}
-    </ion-item>
-    <ion-item>
-      <ion-chip>
-        <ion-avatar>
-          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-        </ion-avatar>
-        <ion-label>Miguel Angel Maldonado Briones</ion-label>
-      </ion-chip>
-    </ion-item>
-    <ion-item>
-      <ion-button shape="round">
-        Clickea aqui
-      </ion-button>
-    </ion-item>
-  </ion-list>
-  <ion-header>
-  <ion-toolbar>
-    <ion-title>Componentes</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <ion-list>
-    <ion-item> Hola Mundo </ion-item>
-  </ion-list>
-
-  <ion-button routerLink="/alert">
-    Alert
-  </ion-button>
-  <ion-button routerLink="/action-sheet">
-    Action Sheet
-  </ion-button> -->
-
-<!-- </ion-content> --> 
-
 <ion-header>
   <ion-toolbar>
+
     <ion-buttons slot="start">
       <ion-menu-button menu="first" color="primary"></ion-menu-button>
     </ion-buttons>
+
     <ion-title color="primary">Componentes</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
+
   <ion-list>
     <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirectTo" detail>
       <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
       {{c.name}}
     </ion-item>
   </ion-list>
+  <ion-button shape="round">
+    Clickea aqui
+ </ion-button>
+
 </ion-content>
