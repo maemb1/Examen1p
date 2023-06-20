@@ -9,17 +9,13 @@ import { DataService } from './services/data.service';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-
-  componentes!: Observable<Componente[]>;
-
-  constructor(private dataService: DataService) {
-  }
-  initializeApp() {
-  this.componentes = this.dataService.getMenuOpts();
-  }
-  
+  componentes: Observable<Componente[]> | undefined;
   ngOnInit() {
     this.componentes = this.dataService.getMenuOpts();
   }
-  
+  constructor(private dataService: DataService) {
+  }
+  initializeApp() {
+    this.componentes = this.dataService.getMenuOpts();
+  }
 }
