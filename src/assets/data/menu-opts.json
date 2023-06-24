@@ -15,7 +15,7 @@
         "redirectTo": "/avatar"
     },
     {
-    "icon": "ellipsis-horizontal-cicle-outline",
+    "icon": "ellipsis-horizontal-circle-outline",
     "name": "input-examens",
     "redirectTo": "/input-examens"
     }
