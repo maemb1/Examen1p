@@ -33,6 +33,11 @@ const routes: Routes = [
     path: 'input',
     loadChildren: () => import('./pages/input/input.module').then(m => m.InputPageModule)
   },
+  {
+    path: 'input-examens',
+    loadChildren: () => import('./pages/input-examens/input-examens.module').then( m => m.InputExamensPageModule)
+  },
+ 
 ];
 
 @NgModule({
